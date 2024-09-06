@@ -8,6 +8,8 @@ df2 = pd.read_csv('03_Item_Information_Data.csv')
 
 df = pd.merge(df1,df2, on=['Item ID','Shelf ID'])
 
+df = pd.merge(df1,df2, on=['Item ID','Shelf ID'])
+
 filtered_stalls = df[(df['Picking up item'] == True) & (df['Putting item into bag'] == True)]
 
 # Group by the stall (assuming the column for stall names is 'stall_name') and count how many products were purchased
